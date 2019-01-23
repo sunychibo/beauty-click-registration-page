@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="author" content="Alexander Chebaev">
+  <title>Заявка на регистрацию</title>
+  <link rel="stylesheet" href="style.min.css">
+</head>
+<body>
+  <header class="page-header">
+    <a class="page-header__logo">
+      <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Beauty click">
+    </a>
+    <nav class="main-nav">
+      <a class="main-nav__button" href="#"></a>
+    </nav>
+  </header>
+  <main class="page-main container">
+    <section class="enrollment">
+      <header class="enrollment__header">
+        <h2 class="enrollment__title">Регистрация салона</h2>
+      </header>
+      <form class="enrollment__form" action="https://beauty-click.ru/script.php" method="post">
+        <fieldset class="enrollment__section">
+          <p class="enrollment__item">
+            <label for="enrollment__email">Ваш e-mail</label>
+            <input id="enrollment__email" type="email" name="email" value="">
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section"></fieldset>
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__password">Придумайте пароль</label>
+            <input id="enrollment__password" type="password" name="password" value="">
+          </p>
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__password-confirm">Повторите пароль</label>
+            <input id="enrollment__password-confirm" type="password" name="password-confirm" value="">
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section"></fieldset>
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__first-name">Имя представителя</label>
+            <input id="enrollment__first-name" type="text" name="first-name" value="">
+          </p>
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__second-name">Фамилия представителя</label>
+            <input id="enrollment__second-name" type="text" name="second-name" value="">
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section">
+          <p class="enrollment__item">
+            <label for="enrollment__company-name">Наименование салона</label>
+            <input id="enrollment__company-name" type="text" name="company-name" value="">
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section">
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__phone">+7</label>
+            <input id="enrollment__phone" type="tel" name="phone" value="">
+          </p>
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__phone-verification">Код из СМС</label>
+            <input id="enrollment__phone-verification" type="text" name="phone-verification" value="">
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section">
+          <p class="enrollment__item enrollment__item--half-width">
+            <label for="enrollment__attach-file">Прикрепите файл с реквизитами</label>
+            <input id="enrollment__attach-file" type="text" name="attach-file" value="">
+            <button class="button button--attach-file"></button>
+          </p>
+        </fieldset>
+        <fieldset class="enrollment__section enrollment__footer">
+          <p class="enrollment__item enrollment__item--half-width">
+            <button class="button" type="submit">Зарегистрироваться</button>
+          </p>  
+          <p class="enrollment__item enrollment__info enrollment__item--half-width">
+            Нажимая на кнопку &laquo;Зарегистрироваться&raquo; я даю согласие на обработку личной информации и соглашаюсь с <a href="#">политикой сервиса</a>
+          </p>
+        </fieldset>
+      </form>
+    </section>
+  </main>
+</body>
+</html>

@@ -1,0 +1,27 @@
+input {
+    background-color: transparent;
+    font-size: 18px;
+    padding: 10px 10px 10px 0;
+    display: block;
+    width: 100%;
+    border: none;
+    border-bottom: 1px solid #757575;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+input ~ label {
+    position: absolute;
+    pointer-events: none;
+    top: 5px;
+    transition: 0.2s ease all;
+}
+
+input:focus ~ label,
+input:valid ~ label {
+    top: -20px;
+    left: 0;
+    color: $darkgrey;
+}

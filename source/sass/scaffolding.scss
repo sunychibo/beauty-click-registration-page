@@ -1,12 +1,41 @@
+@font-face {
+    font-family: 'Ubuntu';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Ubuntu Light'), local('Ubuntu-Light'),
+         url('../fonts/ubuntu-v12-cyrillic-300.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/ubuntu-v12-cyrillic-300.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+}
+
+@font-face {
+    font-family: 'Uni Neue';
+    src: local('Uni Neue Light'), local('UniNeueLight'),
+        url('../fonts/UniNeueLight.woff2') format('woff2'),
+        url('../fonts/UniNeueLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+
+:root {
+    box-sizing: border-box;
+}
+
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
 body {
     min-width: 328px;
     margin: 0;
     padding: 0;
 
-    font-size: 18px;
-    line-height: 27px;
-    font-family: "Arial", sans-serif;
-    color: #f7f4f1;
+    font-size: 13px;
+    font-weight: 300;
+    line-height: 20px;
+    font-family: "Ubuntu", Arial, sans-serif;
+    color: $dark;
     font-style: normal;
 
     background-color: $lightgrey;
@@ -16,3 +45,11 @@ img {
     max-width: 100%;
     height: auto;
 }
+
+.container {
+    margin: 0 auto;
+    max-width: 640px;
+    padding-top: 71px;
+    padding-bottom: 110px;
+}
+

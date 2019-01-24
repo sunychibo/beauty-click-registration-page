@@ -1,0 +1,44 @@
+.enrollment__title {
+    margin-bottom: 47px;    
+}
+
+.section--two-columns {
+    display: flex;
+    align-items: flex-end;
+    .section__item {
+        flex-basis: 300px;
+    }
+}
+
+.section__item--two-columns {
+    display: flex;
+    align-items: flex-end;
+    .section__item {
+        flex-basis: 140px;
+        
+    }
+    .section__item +
+    .section__item {
+        margin-left: 20px;
+    }
+}
+
+.enrollment__section +
+.enrollment__section {
+    margin-top: 49px;
+}    
+
+.enrollment__item {
+    position: relative;
+    margin: 0;
+}
+
+.enrollment__item +
+.enrollment__item {
+    margin-left: 40px;
+}
+
+.enrollment__footer {
+    align-items: flex-start;
+}
+

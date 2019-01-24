@@ -1,87 +1,98 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <meta name="author" content="Alexander Chebaev">
   <title>Заявка на регистрацию</title>
-  <link rel="stylesheet" href="style.min.css">
+  <link rel="stylesheet" href="css/style.min.css">
 </head>
+
 <body>
   <header class="page-header">
-    <a class="page-header__logo">
-      <img class="page-header__logo-image" src="img/logotype-mobile.svg" width="226" height="30" alt="Beauty click">
+    <a class="page-header__logo" href="#">
+      <img class="page-header__logo-image" src="img/logo.png" width="52" height="70" alt="Beauty click">
     </a>
     <nav class="main-nav">
-      <a class="main-nav__button" href="#"></a>
+      <a class="button main-nav__button button--next" href="#">
+        <img src="img/arrow-right.png" width="11" height="22" alt="Вперед">  
+      </a>
     </nav>
   </header>
   <main class="page-main container">
     <section class="enrollment">
       <header class="enrollment__header">
-        <h2 class="enrollment__title">Регистрация салона</h2>
+        <h2 class="title enrollment__title">Регистрация салона</h2>
       </header>
       <form class="enrollment__form" action="https://beauty-click.ru/script.php" method="post">
-        <fieldset class="enrollment__section">
+        <div class="enrollment__section">
           <p class="enrollment__item">
-            <label for="enrollment__email">Ваш e-mail</label>
-            <input id="enrollment__email" type="email" name="email" value="">
+            <input class="enrollment__input" id="email" type="email" name="email" value="" required>
+            <label class="enrollment__label" for="email">Ваш e-mail</label>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section"></fieldset>
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__password">Придумайте пароль</label>
-            <input id="enrollment__password" type="password" name="password" value="">
+        </div>
+        <div class="enrollment__section section--two-columns">
+          <p class="enrollment__item section__item">
+            <input class="enrollment__input" id="password" type="password" name="password" value="" required>
+            <label class="enrollment__label" for="password">Придумайте пароль</label>
           </p>
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__password-confirm">Повторите пароль</label>
-            <input id="enrollment__password-confirm" type="password" name="password-confirm" value="">
+          <p class="enrollment__item section__item">
+            <input class="enrollment__input" id="password-confirm" type="password" name="password-confirm" value="" required>
+            <label class="enrollment__label" for="password-confirm">Повторите пароль</label>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section"></fieldset>
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__first-name">Имя представителя</label>
-            <input id="enrollment__first-name" type="text" name="first-name" value="">
+        </div>
+        <div class="enrollment__section section--two-columns">
+          <p class="enrollment__item section__item">
+            <input class="enrollment__input" id="first-name" type="text" name="first-name" value="" required>
+            <label class="enrollment__label" for="first-name">Имя представителя</label>
           </p>
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__second-name">Фамилия представителя</label>
-            <input id="enrollment__second-name" type="text" name="second-name" value="">
+          <p class="enrollment__item section__item">
+            <input class="enrollment__input" id="second-name" type="text" name="second-name" value="" required>
+            <label class="enrollment__label" for="second-name">Фамилия представителя</label>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section">
+        </div>
+        <div class="enrollment__section">
           <p class="enrollment__item">
-            <label for="enrollment__company-name">Наименование салона</label>
-            <input id="enrollment__company-name" type="text" name="company-name" value="">
+            <input class="enrollment__input" id="company-name" type="text" name="company-name" value="" required>
+            <label class="enrollment__label" for="company-name">Наименование салона</label>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section">
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__phone">+7</label>
-            <input id="enrollment__phone" type="tel" name="phone" value="">
+        </div>
+        <div class="enrollment__section section--two-columns">
+          <p class="enrollment__item section__item">
+            <input class="enrollment__input" id="phone" type="tel" name="phone" value="" required>
+            <label class="enrollment__label" for="phone">+7 (999) 999-99-99</label>
           </p>
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__phone-verification">Код из СМС</label>
-            <input id="enrollment__phone-verification" type="text" name="phone-verification" value="">
+          <p class="enrollment__item section__item section__item--two-columns">
+            <span class="enrollment__form-group section__item">
+              <input class="enrollment__input" id="phone-verification" type="text" name="phone-verification" value="" required>
+              <label class="enrollment__label" for="phone-verification">Код из СМС</label>
+            </span>
+            <button class="button button--get-code section__item">Получить код</button>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section">
-          <p class="enrollment__item enrollment__item--half-width">
-            <label for="enrollment__attach-file">Прикрепите файл с реквизитами</label>
-            <input id="enrollment__attach-file" type="text" name="attach-file" value="">
-            <button class="button button--attach-file"></button>
+        </div>
+        <div class="enrollment__section section--two-columns">
+          <p class="enrollment__item section__item">
+            <label class="enrollment__label">Прикрепите файл с реквизитами</label>
+            <button class="button button--attach-file">
+              <img src="img/plus-sign.png" alt="Прикрепить файл">
+            </button>
           </p>
-        </fieldset>
-        <fieldset class="enrollment__section enrollment__footer">
-          <p class="enrollment__item enrollment__item--half-width">
-            <button class="button" type="submit">Зарегистрироваться</button>
-          </p>  
-          <p class="enrollment__item enrollment__info enrollment__item--half-width">
-            Нажимая на кнопку &laquo;Зарегистрироваться&raquo; я даю согласие на обработку личной информации и соглашаюсь с <a href="#">политикой сервиса</a>
+        </div>
+        <div class="enrollment__section enrollment__footer section--two-columns">
+          <p class="enrollment__item section__item">
+            <button class="button button--submit" type="submit">Зарегистрироваться</button>
           </p>
-        </fieldset>
+          <p class="enrollment__item enrollment__info section__item">
+            Нажимая на кнопку &laquo;Зарегистрироваться&raquo;</br>
+            я даю согласие на обработку личной информации и
+            соглашаюсь с <a href="#">политикой сервиса</a>
+          </p>
+        </div>
       </form>
     </section>
   </main>
 </body>
+
 </html>

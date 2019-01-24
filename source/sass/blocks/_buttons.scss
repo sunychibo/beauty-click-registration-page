@@ -1,0 +1,29 @@
+.button {
+    display: inline-block;
+    background: $dark;
+    color: $white;
+    text-transform: uppercase;
+    border: none;
+    padding-top: 13px;
+    padding-bottom: 13px;
+    &--next {
+        width: 40px;
+        height: 80px;
+        position: relative;
+        img {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+    &--submit {
+        width: 100%;
+    }
+    &--attach-file {
+        padding: 8px 10px;
+        border-radius: 50%;
+        float: right;
+        margin-top: -6px;
+    }
+}

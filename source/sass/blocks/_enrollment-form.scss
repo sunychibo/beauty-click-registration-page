@@ -38,6 +38,22 @@
     margin-left: 40px;
 }
 
+.enrollment__label {
+    &--attach-file {
+        display: block;
+        position: relative;
+    }
+}
+
+.input-overlay {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .enrollment__footer {
     align-items: flex-start;
 }

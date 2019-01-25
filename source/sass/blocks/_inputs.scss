@@ -1,6 +1,7 @@
 input {
     background-color: transparent;
-    font-size: 18px;
+    font-family:inherit; 
+    font-size: 14px;
     padding: 10px 10px 10px 0;
     display: block;
     width: 100%;
@@ -12,16 +13,28 @@ input {
     }
 }
 
-input ~ label {
+input ~ label,
+input ~ span.label--pseudo {
     position: absolute;
     pointer-events: none;
     top: 5px;
     transition: 0.2s ease all;
 }
 
+input::-webkit-input-placeholder { color: transparent; transition: color 0.2s ease-in-out}
+input:-moz-placeholder { color: transparent; transition: color 0.2s ease-in-out} /* FF 4-18 */
+input::-moz-placeholder { color: transparent; transition: color 0.2s ease-in-out} /* FF 19+ */
+input:-ms-input-placeholder { color: transparent; transition: color 0.2s ease-in-out} /* IE 10+ */
+
+input:focus::-webkit-input-placeholder { color: $darkgrey; }
+input:focus:-moz-placeholder { color: $darkgrey; } /* FF 4-18 */
+input:focus::-moz-placeholder { color: $darkgrey; } /* FF 19+ */
+input:focus:-ms-input-placeholder { color: $darkgrey; } /* IE 10+ */
+
 input:focus ~ label,
-input:valid ~ label {
+input:focus ~ span.label--pseudo,
+input:valid ~ label,
+input:valid ~ span.label--pseudo {
     top: -20px;
     left: 0;
-    color: $darkgrey;
 }

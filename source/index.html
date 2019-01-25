@@ -29,7 +29,7 @@
       <form class="enrollment__form" action="https://beauty-click.ru/script.php" method="post">
         <div class="enrollment__section">
           <p class="enrollment__item">
-            <input class="enrollment__input" id="email" type="email" name="email" value="" required>
+            <input class="enrollment__input" id="email" type="email" name="email" value="" placeholder="email@mail.ru" required>
             <label class="enrollment__label" for="email">Ваш e-mail</label>
           </p>
         </div>
@@ -45,24 +45,24 @@
         </div>
         <div class="enrollment__section section--two-columns">
           <p class="enrollment__item section__item">
-            <input class="enrollment__input" id="first-name" type="text" name="first-name" value="" required>
+            <input class="enrollment__input" id="first-name" type="text" name="first-name" value="" placeholder="Иван" required>
             <label class="enrollment__label" for="first-name">Имя представителя</label>
           </p>
           <p class="enrollment__item section__item">
-            <input class="enrollment__input" id="second-name" type="text" name="second-name" value="" required>
+            <input class="enrollment__input" id="second-name" type="text" name="second-name" value="" placeholder="Петров" required>
             <label class="enrollment__label" for="second-name">Фамилия представителя</label>
           </p>
         </div>
         <div class="enrollment__section">
           <p class="enrollment__item">
-            <input class="enrollment__input" id="company-name" type="text" name="company-name" value="" required>
+            <input class="enrollment__input" id="company-name" type="text" name="company-name" value="" placeholder="ПАО Брови" required>
             <label class="enrollment__label" for="company-name">Наименование салона</label>
           </p>
         </div>
         <div class="enrollment__section section--two-columns">
           <p class="enrollment__item section__item">
-            <input class="enrollment__input" id="phone" type="tel" name="phone" value="" required>
-            <label class="enrollment__label" for="phone">+7 (999) 999-99-99</label>
+            <input class="enrollment__input" id="phone" type="tel" name="phone" value="" placeholder="+7 (999) 999-99-99" required>
+            <label class="enrollment__label" for="phone">Номер телефона</label>
           </p>
           <p class="enrollment__item section__item section__item--two-columns">
             <span class="enrollment__form-group section__item">
@@ -73,12 +73,18 @@
           </p>
         </div>
         <div class="enrollment__section section--two-columns">
-          <p class="enrollment__item section__item">
-            <label class="enrollment__label">Прикрепите файл с реквизитами</label>
-            <button class="button button--attach-file">
-              <img src="img/plus-sign.png" alt="Прикрепить файл">
-            </button>
-          </p>
+            <p class="enrollment__item section__item">
+                <label class="enrollment__label enrollment__label--attach-file" for="attach-file">
+                    <input class="enrollment__input input--pseudo" type="text" name="attach-file--pseudo" value="" required>
+                    <span class="enrollment__label label--pseudo">Прикрепите файл с реквизитами</span>
+                    <input class="enrollment__input--attach-file visually-hidden" id="attach-file" title="file input"
+                        multiple="" type="file" name="attach-file" required>
+                    <button class="button button--attach-file">
+                        <img src="img/plus-sign.png" alt="Прикрепить файл">
+                    </button>
+                    <span class="input-overlay"></span>
+                </label>
+            </p>
         </div>
         <div class="enrollment__section enrollment__footer section--two-columns">
           <p class="enrollment__item section__item">
@@ -93,6 +99,7 @@
       </form>
     </section>
   </main>
+  <script src="js/main.js"></script>
 </body>
 
 </html>

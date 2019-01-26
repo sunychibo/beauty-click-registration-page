@@ -33,8 +33,8 @@ input:focus:-ms-input-placeholder { color: $darkgrey; } /* IE 10+ */
 
 input:focus ~ label,
 input:focus ~ span.label--pseudo,
-input:valid ~ label,
-input:valid ~ span.label--pseudo {
+input:not(:placeholder-shown) ~ label,
+input:not(:placeholder-shown) ~ span.label--pseudo {
     top: -20px;
     left: 0;
 }

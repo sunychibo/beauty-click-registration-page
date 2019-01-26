@@ -66,6 +66,7 @@ gulp.task("serve", function(){
     });
 
     gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
+    gulp.watch("source/js/**/*.js", ["copy"]);
     gulp.watch("source/*.html", ["html"]).on('change', server.reload);
 });
 

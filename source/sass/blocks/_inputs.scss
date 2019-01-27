@@ -38,3 +38,15 @@ input:not(:placeholder-shown) ~ span.label--pseudo {
     top: -20px;
     left: 0;
 }
+
+.error-message {
+    position: absolute;
+    background-color: #ff8c79;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    margin-bottom: -26px;
+    text-align: center;
+    color: #fff;
+    padding: 3px;
+}
